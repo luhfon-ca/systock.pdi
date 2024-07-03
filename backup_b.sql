@@ -27,7 +27,7 @@ SET default_table_access_method = heap;
 CREATE TABLE public.consumos_b (
     ano integer NOT NULL,
     mes integer NOT NULL,
-    status character varying(1) NOT NULL,
+    status character varying(10) NOT NULL,
     valor_total numeric(12,4) DEFAULT 0 NOT NULL
 );
 
