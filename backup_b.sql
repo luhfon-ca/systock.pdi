@@ -28,7 +28,7 @@ CREATE TABLE public.consumos_b (
     ano integer NOT NULL,
     mes integer NOT NULL,
     status character varying(1) NOT NULL,
-    valor numeric(12,4) DEFAULT 0 NOT NULL
+    valor_total numeric(12,4) DEFAULT 0 NOT NULL
 );
 
 
@@ -38,7 +38,7 @@ ALTER TABLE public.consumos_b OWNER TO postgres;
 -- Data for Name: consumos_b; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.consumos_b (ano, mes, status, valor) FROM stdin;
+COPY public.consumos_b (ano, mes, status, valor_total) FROM stdin;
 \.
 
 
