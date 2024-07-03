@@ -21,45 +21,33 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: consumos_a; Type: TABLE; Schema: public; Owner: postgres
+-- Name: consumos_b; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.consumos_a (
+CREATE TABLE public.consumos_b (
     ano integer NOT NULL,
     mes integer NOT NULL,
-    status character varying(10) NOT NULL,
-    valor_total numeric(12,4) DEFAULT 0 NOT NULL
+    status character varying(1) NOT NULL,
+    valor numeric(12,4) DEFAULT 0 NOT NULL
 );
 
 
-ALTER TABLE public.consumos_a OWNER TO postgres;
+ALTER TABLE public.consumos_b OWNER TO postgres;
 
 --
--- Data for Name: consumos_a; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: consumos_b; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.consumos_a (ano, mes, status, valor_total) FROM stdin;
-2024	1	VENDA	700000.0000
-2024	1	DEVOLUCAO	70000.0000
-2024	2	VENDA	500000.0000
-2024	2	DEVOLUCAO	50000.0000
-2024	3	VENDA	700000.0000
-2024	3	DEVOLUCAO	70000.0000
-2024	4	VENDA	500000.0000
-2024	4	DEVOLUCAO	50000.0000
-2024	5	VENDA	700000.0000
-2024	5	DEVOLUCAO	70000.0000
-2024	6	VENDA	500000.0000
-2024	6	DEVOLUCAO	50000.0000
+COPY public.consumos_b (ano, mes, status, valor) FROM stdin;
 \.
 
 
 --
--- Name: consumos_a pk_consumo_a; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: consumos_b pk_consumo_b; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.consumos_a
-    ADD CONSTRAINT pk_consumo_a PRIMARY KEY (ano, mes, status);
+ALTER TABLE ONLY public.consumos_b
+    ADD CONSTRAINT pk_consumo_b PRIMARY KEY (ano, mes, status);
 
 
 --
